@@ -1,6 +1,6 @@
 
 export class Like {
-  constructor(private _likes:number, public _selected:boolean) {
+  constructor(private _likes:number, private _selected:boolean) {
 
   }
   get likes() {
@@ -8,12 +8,7 @@ export class Like {
   }
 
   clicked() {
-    if (this._selected) {
-      this._likes = this._likes - 1;
-      this._selected = !this._selected;
-    } else {
-      this._likes = this._likes + 1;
-      this._selected = !this._selected;
-    }
+    this._likes += this._selected ? -1 : 1;
+    this._selected = !this._selected;
   }
 }
