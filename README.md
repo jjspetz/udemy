@@ -1,5 +1,5 @@
 # Udemy Course Work
-A Space for my Udemy Course Work
+A space for my Udemy course work.
 
 #### Courses
 Angular Master Class for Beginners  
