@@ -16,16 +16,18 @@ app.get('/', function(req, res){
 });
 
 app.get('/books', function(req, res){
-  res.send(Book);
-  // Book.find().exec(function(err, books) {
-  //     if (err){
-  //       res.send('error')
-  //     } else {
-  //       console.log(books);
-  //       resp.json(books);
-  //     }
-  //   });
+  // res.send(Book);
+  Book.find().exec(function(err, books) {
+      if (err){
+        res.send('error')
+      } else {
+        console.log(books);
+        res.json(books);
+      }
+    });
 });
+
+app.get()
 
 app.listen('8000', function() {
   console.log('listening on 8000');
