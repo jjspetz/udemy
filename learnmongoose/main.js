@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Book = require('./book.model')
 
 // connection to database
-var db = 'mongodb://localhost/books';
+var db = 'mongodb://localhost/test';
 
 mongoose.connect(db, {
   useMongoClient: true,
@@ -26,8 +26,6 @@ app.get('/books', function(req, res){
       }
     });
 });
-
-app.get()
 
 app.listen('8000', function() {
   console.log('listening on 8000');
